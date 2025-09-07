@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ромчик попчик</title>
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0c10" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #111317;
+      --text: #0e070f;
+      --muted: #313234;
+      --accent: #7aa2ff;
+      --ring: #1f2633;
+    }
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 600px at 80% 0%, #0f1117 0%, transparent 60%),
+        radial-gradient(1000px 800px at 10% 100%, #0d1114 0%, transparent 60%),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: clamp(16px, 4vw, 32px);
+    }
+    .main-card {
+      max-width: min(100vw, 780px);
+      width: 100%;
+      padding: 20px;;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), var(--card);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+      backdrop-filter: blur(6px);
+      animation: fadeIn .9s ease both;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    img {
+      display: block;
+      max-width: 300px;
+      width: 250px;
+      height: 250px;
+      margin: 1 auto;
+      border-radius: 15px;
+      border: 1px solid rgba(215, 15, 15, 0.06);
+      box-shadow: 0 8px 24px rgba(0,0,0,.5);
+      user-select: none;
+    }
+    .text-block {
+      font-size: 29px; 
+      line-height: 1.8;
+      color: rgb(19, 1, 1) (--text);
+      text-align: right;
+      align-self: center;
+      font-family: Impact, sans-serif;
+    }
+    footer {
+      position: fixed;
+      inset: auto 0 18px 0;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .cta {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #1a1f2b, #121621);
+      color: var(--text);
+      border: 1px solid var(--ring);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: .2px;
+      transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    .cta:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px }
+    .cta:hover {
+      transform: translateY(-2px);
+      border-color: rgba(122,162,255,.6);
+      box-shadow: 0 12px 26px rgba(0,0,0,.42);
+    }
+    small.hint {
+      position: fixed;
+      top: 14px; right: 16px;
+      color: var(--muted);
+      font-size: .9rem;
+      opacity: .9;
+    }
+    fadeIn { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+  </style>
+</head>
+<body>
+  <small class="hint" aria-hidden="true">Сюда ненадо смотреть</small>
+  <main class="main-card" aria-label="Фото друга с текстом">
+    <img src="roman.png" alt="Фото моего друга" loading="lazy" decoding="async" />
+    <div class="text-block">
+      <!-- жопа -->
+      <p>Ромчик в попе гномчик.</p>
+    </div>
+  </main>
+  <footer>
+    <a class="cta" href="https://www.youtube.com/watch?v=E3K23giUro0&ab_channel=meta-peek" target="_blank" rel="noopener">вот почему</a>
+  </footer>
+</body>
+</html>
